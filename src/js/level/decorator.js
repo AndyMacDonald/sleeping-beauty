@@ -58,7 +58,6 @@ function decorateLast(level) {
 
 			if (xy.dist8(bed) == 1) { // close heroes
 				let hero = new beings.Hero();
-				hero.ai.mobile = false;
 				hero.moveTo(xy.clone(), level);
 				continue;
 			}
