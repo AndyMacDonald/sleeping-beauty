@@ -193,8 +193,17 @@ export class Hero extends Autonomous {
 
 export class Princess extends Autonomous {
 	constructor() {
-		super({ch:"P", fg:"#ff0", name:"princess"});
+		super({ch:"P", fg:"#ff0", name:"sleeping princess"});
+		this.sleeping = true;
 		this.ai.hostile = false;
 		this.ai.mobile = false;
 	}
+
+	getChat() {
+		if (this.sleeping) {
+			return "";
+		} else {
+			return HERO_CHATS.random();
+		}
+	};
 }
