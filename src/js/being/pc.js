@@ -204,7 +204,7 @@ class PC extends Being {
 		callbacks.push(() => this._chat(being));
 		options.push("Talk to %it".format(being))
 
-		if (being instanceof Hero) {
+		if (being instanceof Hero || being instanceof Princess) {
 		} else {
 			callbacks.push(() => this._attack(being));
 			options.push("Attack %it".format(being))
