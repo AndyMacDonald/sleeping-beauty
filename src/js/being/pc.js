@@ -195,6 +195,8 @@ class PC extends Being {
 				log.add("With a fluttering of her eyelids, %the comes awake!", being);
 				being.sleeping = false;
 				being._visual.name = "princess";
+			} else {
+				log.add("%The is already awake.", being);
 			}
 		}
 		else
