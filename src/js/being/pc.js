@@ -190,7 +190,17 @@ class PC extends Being {
 	}
 
 	_kiss(being) {
-		log.add("%The does not seem to be amused!", being);
+		if (being instanceof Princess) {
+			if (being.sleeping) {
+				log.add("With a fluttering of her eyelids, %the comes awake!", being);
+				being.sleeping = false;
+				being._visual.name = "princess";
+			}
+		}
+		else
+		{
+			log.add("%The does not seem to be amused!", being);
+		}
 		this._resolve(); // successful kiss interaction
 	}
 
