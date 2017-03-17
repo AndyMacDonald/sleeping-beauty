@@ -190,3 +190,11 @@ export class Hero extends Autonomous {
 		}
 	}
 }
+
+export class Princess extends Autonomous {
+	constructor() {
+		super({ch:"P", fg:"#ff0", name:"princess"});
+		this.ai.hostile = false;
+		this.ai.mobile = false;
+	}
+}

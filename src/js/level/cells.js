@@ -10,13 +10,6 @@ export class Brambles extends Entity {
 	describeA() { return this.toString(); }
 }
 
-export class Princess extends Entity {
-	constructor() {
-		super({ch:"P", fg:"#ff0", name:"princess"});
-		this.blocks = BLOCKS_MOVEMENT;
-	}
-}
-
 export class Pillar extends Entity {
 	constructor() {
 		super({ch:"T", fg:"#fff", name:"pillar"});
